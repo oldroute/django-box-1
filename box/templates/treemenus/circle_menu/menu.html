@@ -1,0 +1,39 @@
+{% load treemenus_tags static base_tags %}
+{% get_menu_items as items %}
+{% get_fp_logo_url as fp_logo_url %}
+
+<svg id="circle-paths" class='circle__paths desktop'></svg>
+<nav id="circle-menu" class='circle__menu show desktop'>
+    <div id="circle-wave" class='circle__wave wave watch'></div>
+    <ul id="circle-menu-ul">
+        {% for item in items.right %}
+            {% if item.show %}
+                <li id="item-right-{{ forloop.counter0 }}" class="li__right" data-path="#path-right-{{ forloop.counter0 }}">
+                    <a href="{{ item.url }}">{{ item.caption }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% for item in items.left %}
+            {% if item.show %}
+                <li id="item-left-{{ forloop.counter0 }}"  class="li__left"  data-path="#path-left-{{ forloop.counter0 }}" >
+                    <a href="{{ item.url }}">{{ item.caption }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <img id="circle-logo" class="circle__logo" alt="{{ chunks.name.content }}" src="{{ fp_logo_url }}" >
+</nav>
+
+<!--noindex-->
+<div class="vertical mobile">
+    <img id="vertical-logo" class="vertical__logo" alt="{{ chunks.name.content }}" src="{{ fp_logo_url }}" >
+    <div id="vertical-wave" class='vertical__wave wave watch'></div>
+    <div id="vertical-menu" class="vertical__menu">
+        {% for item in menu.root_item.children %}
+            {% if item.show %}
+                <a href="{{ item.url }}"><span>{{ item.caption }}</span></a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<!--/noindex-->

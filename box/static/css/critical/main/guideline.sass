@@ -1,0 +1,204 @@
+li
+    list-style: none
+    cursor: pointer
+h1
+    font-size: $font24
+    color: $white
+    margin-bottom: 24px
+    font-weight: normal
+    background: $add-color
+    width: max-content
+    padding: 3px 6px
+    text-transform: uppercase
+    font-family: $extra-fonts
+    margin-left: -6px
+h2
+    font-size: $font22
+    color: $black
+    margin-bottom: 24px
+    font-weight: normal
+    text-transform: uppercase
+    font-family: $extra-fonts
+
+h3
+    font-size: $font21
+    color: $black
+    margin-bottom: 24px
+    font-weight: normal  
+    text-transform: uppercase
+    font-family: $extra-fonts
+h4
+    font-size: $font20
+    color: $black
+    margin-bottom: 24px
+    font-weight: normal
+    text-transform: uppercase
+    font-family: $extra-fonts
+h5
+    font-size: $font18
+    color: $main-color
+    margin-bottom: 24px
+    font-weight: normal
+    text-transform: uppercase
+    font-family: $extra-fonts
+h6
+    font-size: $font17
+    color: $black
+    margin-bottom: 24px
+    font-weight: bold
+    font-family: $extra-fonts
+
+
+img
+    display: inline-block
+    max-width: 100%
+    max-height: 100%
+    height: auto
+
+.page__content
+    &:before,
+    &:after
+        content: " "
+        display: table
+        clear: both
+    ul
+        li
+            list-style-type: disc
+    ol
+        li
+            list-style-type: decimal
+    ul,
+    ol
+        margin-bottom: 24px
+        li
+            margin-left: 36px
+            padding-left: 8px
+            cursor: auto
+            line-height: 24px
+            font-size: 13px
+            a
+                text-decoration: none
+
+    blockquote
+        padding: 24px 16px
+        font-style: italic
+        line-height: 24px
+        overflow: auto
+        font-size: $font17
+        border-left: 8px solid $main-color
+        color: $main-color
+        background: $light-grey
+        &:not(:last-child)
+            margin-bottom: 24px
+        p
+            font-size: $font14
+    p
+        font-size: $font14
+        text-align: left
+        line-height: 24px
+        &:not(:last-child)
+            margin-bottom: 24px
+        a
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+        
+    table
+        overflow-x: auto
+        display: block
+        max-width: -webkit-fill-available
+        max-width: -moz-available
+        width: 100%
+        border-spacing: 0
+        &:not(:last-child)
+            margin-bottom: 24px
+        th
+            font-weight: bold
+            text-align: left
+            padding-left: 16px
+            flex: 1
+            height: 54px
+            line-height: 54px
+            background: $light-blue
+            color: $black
+        td
+            text-align: left
+            padding-left: 16px
+            flex: 1
+            height: 54px
+            line-height: 54px
+            font-size: 15px
+        tr
+            &:nth-child(odd)
+                background: $light-grey
+        tbody
+            td
+                height: auto
+                padding: 15px
+                line-height: 22px
+                min-height: 54px
+                p
+                    margin-bottom: 0 !important
+
+    img
+        display: block
+        margin: 24px auto
+        &[style*="float: left"], 
+        &[style*="float:left"]
+            margin-top: 0
+            margin-right: 24px
+        &[style*="float: right"], 
+        &[style*="float:right"]
+            margin-top: 0 
+            margin-left: 24px
+    .news__date
+        font-size: 11px
+        color: #000000CC
+
+@media screen and (max-width: 1023px)
+    .page__content
+        ul,ol
+            li
+                margin-left: 24px !important
+
+//Mobile
+@media screen and (max-width: 767px)
+    h1
+        font-size: $font20
+        background: none
+        margin-left: 0
+        padding: 0
+        color: $black
+        line-height: 32px
+        margin-bottom: 8px
+    h2
+        font-size: $font18
+        line-height: 32px
+        margin-bottom: 8px
+    h3
+        font-size: $font17
+        line-height: 32px
+        margin-bottom: 8px
+    h4
+        font-size: $font16
+        line-height: 32px
+        margin-bottom: 8px
+    h5
+        font-size: $font15
+        line-height: 24px
+        margin-bottom: 8px
+    h6
+        font-size: $font14
+        line-height: 24px
+        margin-bottom: 8px
+
+    .page__content
+        p
+            font-size: 12px
+        table
+            th
+                line-height: normal
+        blockquote
+            padding: 16px
+            font-size: $font14
+            font-style: normal

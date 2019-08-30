@@ -1,0 +1,139 @@
+.page
+    transition: all .5s ease
+    &__hero
+        background-size: cover
+        background-position: center
+        height: 136px
+        margin: -55px 0 24px
+        .page__overlay
+            width: 100%
+            height: 100%
+            .container
+                +flex(center,space-between)
+                .page
+                    &__left
+                        opacity: 0
+                        transition: all .5s ease
+                        margin-top: auto
+                        .page
+                            &__breadcrumbs
+                                .breadcrumbs__item
+                                    color: $opacity60
+                                    text-decoration: none
+                                    line-height: 20px
+                                    margin-bottom: 4px
+                                    font-family: $extra-fonts
+                                    &::after
+                                        content: "→"
+                                        padding-left: 4px
+                            &__title
+                                margin-top: 4px
+                                &.desktop
+                                    display: block
+                                h1
+                                    background: none
+                                    width: auto
+                                    line-height: 32px
+                                    padding: 0
+                                    margin-bottom: 16px
+                                    margin-left: 0
+                    &__right
+                        .page__feedback
+                            &-item
+                                +flex(center, flex-end)
+                                +transition
+                                &:hover span
+                                    opacity: 1
+                                    +transition
+                                &:hover .icon
+                                    border: 2px solid  $white
+                                &:first-child
+                                    margin-bottom: 11px
+                                span
+                                    padding-right: 12px
+                                    color: $opacity60
+                                    opacity: 0
+                                    cursor: default
+                                    +transition
+                                .icon
+                                    +flex(center,center)
+                                    width: 36px
+                                    height: 36px
+                                    border: 2px solid  #ffffff33
+                                    border-radius: 50%
+
+    &__title
+        &.mobile
+            display: none
+
+    .mb40:not(:last-child)
+        margin-bottom: 40px
+
+
+//Tablet
+@media screen and (max-width: 1023px)
+    .page
+        &__hero
+            .page__overlay
+                .container
+                    .page
+                        &__right
+                            .page__feedback
+                                &-item
+                                    span
+                                        display: none
+        .mb40:not(:last-child)
+            margin-bottom: 35px
+//Mobile
+@media screen and (max-width: 767px)
+    .page
+        &__hero
+            height: 40px
+            margin: -34px 0 35px
+            .page__overlay
+                .container
+                    .page
+                        &__left
+                            margin-top: 80px
+                            .page
+                                &__breadcrumbs
+                                    .breadcrumbs__item
+                                        color: $black
+                                        font-size: 10px
+                                &__title
+                                    margin-top: 12px
+                                    &.desktop
+                                        display: none
+                                    h1
+                                        color: $black
+                                        margin-bottom: 0
+
+                        &__right
+                            .page__feedback
+                                display: none
+
+        &__title
+            &.mobile
+                transition: all .5s ease
+                display: block
+                min-height: 32px
+                opacity: 0
+            h1
+                color: $black
+                width: 100%
+
+        .mb40:not(:last-child)
+            margin-bottom: 24px
+
+@media screen and (max-width: 350px)
+    .page
+        &__hero
+            .page__overlay
+                .container
+                    .page
+                        &__left
+                            .page
+                                &__title
+                                    h1
+                                        line-height: 20px
+                                        

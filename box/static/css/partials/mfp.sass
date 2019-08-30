@@ -1,0 +1,84 @@
+.body 
+    .mfp
+        &-bg
+            background: rgba(16,20,27,0.95)
+            opacity: 1
+            position: fixed!important
+            top: 0!important
+            height: 100vh!important
+            z-index: 150
+            min-width: 320px
+            overflow: hidden
+        &-wrap
+            position: fixed!important
+            top: 0!important
+            height: 100%!important
+            z-index: 150
+            min-width: 320px
+        &-container
+            overflow: auto
+            padding-bottom: 32px
+            .mfp-content
+                max-width: 584px
+        &-gallery
+            .mfp-content
+                max-width: 768px
+            .mfp-close
+                width: 44px
+                right: -10px
+                top: -5px
+                &:active
+                    top: -4px
+                &::before, &::after
+                    top: 5px
+            .mfp-arrow
+                &-left
+                    left: -80px
+                    &:before
+                        border: 0
+                &-right
+                    right: -80px
+                    &:before
+                        border: 0
+
+
+        &-close
+            color: #ffffff00 !important
+            top: 20px
+            opacity: 1
+            &:active
+                top: 21px
+            &::before, &::after
+                position: absolute
+                left: 15px
+                content: ' '
+                height: 38px
+                width: 2px
+                background-color: $white
+            &::before
+                transform: rotate(45deg)
+            &::after
+                transform: rotate(-45deg)
+
+.noscroll
+    height: 100%
+    width: 100%
+    position: fixed
+    overflow: hidden
+
+//Mobile
+@media screen and (max-width: 767px)
+    .body
+        .mfp
+            &-gallery
+                .mfp-content
+                    max-width: 70%
+                .mfp-arrow
+                    &-left
+                        left: -50px
+                        &:before
+                            border: 0
+                    &-right
+                        right: -50px
+                        &:before
+                            border: 0

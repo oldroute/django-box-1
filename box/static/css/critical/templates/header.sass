@@ -1,0 +1,89 @@
+.header
+    top: -64px
+    .container
+    &__top
+        height: inherit
+        +flex(flex-start,space-between)
+        &.fp
+            justify-content: flex-end
+        .header
+            &__logo
+                height: 107px
+                opacity: 0
+                margin-top: 16px
+                position: relative
+                transition: all .5s ease
+                .logo__desc
+                    position: absolute
+                    right: 60px
+                    top: 58px
+                    font-size: $font13
+                    color: $white
+                .logo__sticky
+                    display: none
+
+            &__contacts
+                +flex(center,center)
+                font-family: $extra-fonts
+                transition: all 1s ease
+                opacity: 0
+                &_phone
+                    margin-top: 21px
+                    padding-right: 28px
+                    a
+                        color: $main-color
+                        text-decoration: none
+                        font-size: $font20
+                &_email
+                    margin-top: 21px
+                    
+                    a
+                        color: $main-color
+                        text-decoration: none
+                        font-size: $font16
+                        line-height: 26px
+    &.fixed
+        position: fixed
+        width: 100%
+        background: $white
+        height: 64px
+        z-index: 100
+        top: 0 !important
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
+        transition: 0.5s
+        .header
+            &__logo
+                margin-top: 9px
+
+//Доп. брекпоинт для иконки гамбургера
+@media screen and (max-width: 1350px)
+    .header
+        &__top
+            .header
+                &__contacts
+                    position: relative
+                    &_email
+                        padding-right: 56px
+
+
+//Mobile
+@media screen and (max-width: 767px)
+    .header
+        &__top
+            .header
+                &__logo
+                   width: 175px
+                   height: 64px
+                   margin-top: 12px
+                   .logo__desc
+                        right: 10px
+                        top: 30px
+                        font-size: 10px
+                &__contacts
+                    &_phone, &_email
+                        display: none
+        &.fixed
+            height: 50px
+            .hamburger
+                &.nested
+                    top: 5px

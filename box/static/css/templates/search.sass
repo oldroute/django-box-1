@@ -1,0 +1,74 @@
+.search__form
+    .ya-site-form
+        &__input
+            input
+                height: 30px
+                padding-left: 12px
+                border-radius: 23px
+                background: url('../../static/img/loop.svg') right 10px center no-repeat
+                font-style: normal !important
+                &::-moz-placeholder
+                    color: $opacity60 !important
+                &::-webkit-input-placeholder
+                    color: $opacity60 !important
+
+        &__search-input-layout-r
+            position: relative
+            input
+                position: absolute
+                right: 10px
+                top: 7px
+                opacity: 0
+
+    #ya-site-form1, #ya-site-form0, #ya-site-form2
+        .ya-site-form__form
+            .ya-site-form__input-text
+                background-color: $main-color !important
+                color: $white !important
+                height: 36px
+                font-size: $font13 !important
+                max-width: 280px
+                border: 1px solid #ffffff33 !important
+            .ya-site-form__search-input
+                padding: 0 !important
+    #ya-site-form2
+        .ya-site-form__form
+            .ya-site-form__input-text
+                background-color: transparent !important
+
+.search
+    .ya-site-form
+        &__input
+            input
+                height: 30px
+                padding-left: 12px
+                border-radius: 23px
+                background: url('../../static/img/loop-blue.svg') right 10px center no-repeat
+                font-style: normal !important
+                &::-moz-placeholder
+                    color: $opacity60 !important
+                &::-webkit-input-placeholder
+                    color: $opacity60 !important
+
+        &__search-input-layout-r
+            position: relative
+            input
+                position: absolute
+                right: 10px
+                top: 7px
+                opacity: 0
+    #ya-site-form1
+        .ya-site-form__form
+            .ya-site-form__input-text
+                border: 2px solid #F4F4F4 !important
+                padding-right: 35px
+
+
+//Mobile
+@media screen and (max-width: 767px)
+    .search__form
+        #ya-site-form1, #ya-site-form0, #ya-site-form2
+            .ya-site-form__form
+                .ya-site-form__input-text
+                    max-width: 100% !important
+                    font-size: $font16

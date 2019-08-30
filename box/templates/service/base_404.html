@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load base_tags service_tags %}
+
+{% block article_selector %}page__404{% endblock %}
+
+{% block content %}
+
+    {% show_block_content object.main_content %}
+
+    {% show_block_sitemap %}
+
+{% endblock %}

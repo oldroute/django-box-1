@@ -1,0 +1,572 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+        <style>*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}:focus{outline:none!important}a{color:#32428d;cursor:pointer}a:hover{text-decoration:none}body,html{height:100%}body{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;font-family:PT Sans,sans-serif;font-size:14px}.container{max-width:1216px;width:100%;height:100%;margin:0 auto}.container__right{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;width:auto;max-width:none;margin:0 52px}.container__right,.two__column{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.two__column{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.two__column .page__content,.two__column .sidebar__menu{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.page__gallery{margin-top:40px}.page__block-cards{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;margin:42px -16px 8px;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.right-column{position:-webkit-sticky;position:sticky;top:88px}.mfp-hide{display:none!important}@media screen and (max-width:1216px){.container{padding:0 48px}}@media screen and (max-width:1023px){.container{padding:0 16px}.page__block-cards{margin:42px -8px 8px}}@media screen and (max-width:767px){.two__column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.right-column{width:100%}.page__block-cards{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}}li{list-style:none;cursor:pointer}h1{font-size:24px;color:#fff;margin-bottom:24px;font-weight:400;background:rgba(5,10,31,.7);width:-webkit-max-content;width:-moz-max-content;width:max-content;padding:3px 6px;text-transform:uppercase;font-family:PT Sans Narrow,sans-serif;margin-left:-6px}h2{font-size:22px}h2,h3{color:#000;margin-bottom:24px;font-weight:400;text-transform:uppercase;font-family:PT Sans Narrow,sans-serif}h3{font-size:21px}h4{font-size:20px;color:#000}h4,h5{margin-bottom:24px;font-weight:400;text-transform:uppercase;font-family:PT Sans Narrow,sans-serif}h5{font-size:18px;color:#32428d}h6{font-size:17px;color:#000;margin-bottom:24px;font-weight:700;font-family:PT Sans Narrow,sans-serif}img{display:inline-block;max-width:100%;max-height:100%;height:auto}.page__content:after,.page__content:before{content:" ";display:table;clear:both}.page__content ul li{list-style-type:disc}.page__content ol li{list-style-type:decimal}.page__content ol,.page__content ul{margin-bottom:24px}.page__content ol li,.page__content ul li{margin-left:36px;padding-left:8px;cursor:auto;line-height:24px;font-size:13px}.page__content ol li a,.page__content ul li a{text-decoration:none}.page__content blockquote{padding:24px 16px;font-style:italic;line-height:24px;overflow:auto;font-size:17px;border-left:8px solid #32428d;color:#32428d;background:#f4f4f4}.page__content blockquote:not(:last-child){margin-bottom:24px}.page__content blockquote p{font-size:14px}.page__content p{font-size:14px;text-align:left;line-height:24px;margin-bottom:24px}.page__content p a{text-decoration:none}.page__content p a:hover{text-decoration:underline}.page__content table{max-width:-webkit-fill-available;max-width:-moz-available;width:100%;border-spacing:0}.page__content table:not(:last-child){margin-bottom:24px}.page__content table th{font-weight:700;background:#e1e4f3;color:#000}.page__content table td,.page__content table th{text-align:left;padding-left:16px;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;height:54px;line-height:54px}.page__content table td{font-size:15px}.page__content table tr:nth-child(odd){background:#f4f4f4}.page__content table tbody td{height:auto;padding-top:15px;padding-bottom:15px;line-height:22px;min-height:54px}.page__content table tbody td p{margin-bottom:0!important}.page__content img{display:block;margin:24px auto}.page__content img[style*="float:left"],.page__content img[style*="float: left"]{margin-top:0;margin-right:24px}.page__content img[style*="float:right"],.page__content img[style*="float: right"]{margin-top:0;margin-left:24px}.page__content .news__date{font-size:11px;color:rgba(0,0,0,.8)}@media screen and (max-width:1023px){.page__content ol li,.page__content ul li{margin-left:24px!important}}@media screen and (max-width:767px){h1{font-size:20px;background:none;margin-left:0;padding:0;color:#000}h1,h2{line-height:32px;margin-bottom:8px}h2{font-size:18px}h3{font-size:17px}h3,h4{line-height:32px;margin-bottom:8px}h4{font-size:16px}h5{font-size:15px}h5,h6{line-height:24px;margin-bottom:8px}h6{font-size:14px}.page__content p{font-size:12px}.page__content table th{line-height:normal}.page__content blockquote{padding:16px;font-size:14px;font-style:normal}}@-webkit-keyframes one-wave{0%{-webkit-transform:scale(1.2);transform:scale(1.2);border:15px solid #32428d;opacity:0}to{-webkit-transform:scale(1.27);transform:scale(1.27);border:17px solid #32428d;opacity:.5}}@keyframes one-wave{0%{-webkit-transform:scale(1.2);transform:scale(1.2);border:15px solid #32428d;opacity:0}to{-webkit-transform:scale(1.27);transform:scale(1.27);border:17px solid #32428d;opacity:.5}}@-webkit-keyframes waver{0%{border:25px solid #32428d;-webkit-transform:scale(1);transform:scale(1);opacity:.3}25%{border:15px solid #32428d;-webkit-transform:scale(1.2);transform:scale(1.2);opacity:.75}50%{border:7px solid #32428d;-webkit-transform:scale(1.3);transform:scale(1.3);opacity:.3}75%{border:2px solid #32428d;-webkit-transform:scale(1.35);transform:scale(1.35);opacity:.1}to{border:0 solid #32428d;-webkit-transform:scale(1.4);transform:scale(1.4);opacity:0}}@keyframes waver{0%{border:25px solid #32428d;-webkit-transform:scale(1);transform:scale(1);opacity:.3}25%{border:15px solid #32428d;-webkit-transform:scale(1.2);transform:scale(1.2);opacity:.75}50%{border:7px solid #32428d;-webkit-transform:scale(1.3);transform:scale(1.3);opacity:.3}75%{border:2px solid #32428d;-webkit-transform:scale(1.35);transform:scale(1.35);opacity:.1}to{border:0 solid #32428d;-webkit-transform:scale(1.4);transform:scale(1.4);opacity:0}}.fp{background-color:#333}.fp .wrapper{z-index:2}.fp .container__hero{overflow:hidden;top:0;left:0}.fp .container__hero,.fp .container__hero .overlay{width:100%;height:100%;position:absolute}.fp .container__hero video{width:100%;display:block;background-position:50%;-o-object-fit:cover;object-fit:cover;-o-object-position:50% 50%;object-position:50% 50%;height:100%}.fp .circle__wave{position:absolute;left:-10px;top:-10px;width:225px;height:225px;-webkit-border-radius:50%;border-radius:50%}.fp .circle__wave.watch{-webkit-animation:waver 2.8s linear 2s infinite;animation:waver 2.8s linear 2s infinite}.fp .circle__wave.focus{-webkit-animation:one-wave 1s linear 1 forwards;animation:one-wave 1s linear 1 forwards}.fp .circle__wave.focusout{-webkit-animation-name:one-wave 1s linear 1 reverse;animation-name:one-wave 1s linear 1 reverse}.fp .circle__wave.focusout-watch{-webkit-animation-name:one-wave,waver;animation-name:one-wave,waver;-webkit-animation-duration:1s,2.8s;animation-duration:1s,2.8s;-webkit-animation-delay:0s,2s;animation-delay:0s,2s;-webkit-animation-iteration-count:1,infinite;animation-iteration-count:1,infinite;-webkit-animation-direction:reverse,normal;animation-direction:reverse,normal;-webkit-animation-timing-function:linear,linear;animation-timing-function:linear,linear}.fp .circle__menu{position:absolute;left:50%;top:50%;width:204px;height:204px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.fp .circle__menu img{position:relative;width:204px;height:204px;padding:10px;border:0;cursor:pointer;-webkit-transition:all .1s;-o-transition:all .1s;transition:all .1s;opacity:.6}.fp .circle__menu img:focus,.fp .circle__menu img:hover{opacity:1}.fp .circle__menu ul{position:absolute;list-style:none;opacity:0;width:0;height:0;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);-webkit-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}.fp .circle__menu ul.active{opacity:1;width:400px;height:400px}.fp .circle__menu ul li{position:absolute;width:0;height:100%;margin:0 50%}.fp .circle__menu ul li a{text-decoration:none;position:absolute;left:50%;bottom:100%;margin-left:0;text-align:center;overflow:hidden;cursor:pointer;-webkit-box-shadow:none;box-shadow:none;opacity:.6;color:#fff;font-family:PT Sans Narrow;font-size:20px;text-transform:uppercase;margin-bottom:-1px;width:150px;height:auto}.fp .circle__menu ul li a:hover{opacity:1;border-bottom:1px solid #fff}.fp .footer{margin-top:0;margin-bottom:48px}.fp .footer__col,.fp .footer__feedback{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}.fp .footer__feedback{margin-bottom:30px}.fp .footer__feedback-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.fp .footer__feedback-item:hover span{opacity:1;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.fp .footer__feedback-item:hover .icon{border:2px solid #fff}.fp .footer__feedback-item:first-child{margin-bottom:11px}.fp .footer__feedback-item span{padding-right:12px;color:hsla(0,0%,100%,.6);opacity:0;cursor:default;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.fp .footer__feedback-item .icon{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:36px;height:36px;border:2px solid hsla(0,0%,100%,.2);-webkit-border-radius:50%;border-radius:50%}.fp .footer__phone{font-family:PT Sans Narrow;font-size:24px}.fp .footer__phone a{text-decoration:none;color:#fff}.fp .footer__email{font-family:PT Sans Narrow;font-size:16px}.fp .footer__email a{text-decoration:none;color:#fff}.header{top:-64px}.header__top{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.header__top.fp{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.header__top .header__logo{margin-top:16px;position:relative}.header__top .header__logo .logo__desc{position:absolute;right:60px;top:58px;font-size:13px;color:#fff}.header__top .header__logo .logo__sticky{display:none}.header__top .header__contacts{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-family:PT Sans Narrow,sans-serif}.header__top .header__contacts_phone{margin-top:21px;padding-right:28px}.header__top .header__contacts_phone a{color:#32428d;text-decoration:none;font-size:20px}.header__top .header__contacts_email{margin-top:21px;padding-right:28px}.header__top .header__contacts_email a{color:#32428d;text-decoration:none;font-size:16px;line-height:26px}.header.fixed{position:fixed;width:100%;background:#fff;height:64px;z-index:100;top:0!important;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.2);box-shadow:0 2px 4px 0 rgba(0,0,0,.2);-webkit-transition:.5s;-o-transition:.5s;transition:.5s}.header.fixed .header__logo{margin-top:9px}@media screen and (max-width:1350px){.header__top .header__contacts{position:relative}.header__top .header__contacts_email{padding-right:56px}}@media screen and (max-width:767px){.header__top .header__logo{width:175px;margin-top:12px}.header__top .header__logo .logo__desc{right:10px;top:30px;font-size:10px}.header__top .header__contacts_email,.header__top .header__contacts_phone{display:none}}.page__hero{-webkit-background-size:cover;background-size:cover;background-position:50%;height:136px;margin:-55px 0 24px}.page__hero .page__overlay{width:100%;height:100%}.page__hero .page__overlay .container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.page__hero .page__overlay .container .page__left{margin-top:auto}.page__hero .page__overlay .container .page__left .page__breadcrumbs .breadcrumbs__item{color:hsla(0,0%,100%,.6);text-decoration:none;line-height:20px;margin-bottom:4px;font-family:PT Sans Narrow,sans-serif}.page__hero .page__overlay .container .page__left .page__breadcrumbs .breadcrumbs__item:after{content:"\2192";padding-left:4px}.page__hero .page__overlay .container .page__left .page__title{margin-top:4px}.page__hero .page__overlay .container .page__left .page__title h1{background:none;width:auto;line-height:32px;padding:0;margin-bottom:16px;margin-left:0}.page__hero .page__overlay .container .page__right .page__feedback-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.page__hero .page__overlay .container .page__right .page__feedback-item:hover span{opacity:1;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.page__hero .page__overlay .container .page__right .page__feedback-item:hover .icon{border:2px solid #fff}.page__hero .page__overlay .container .page__right .page__feedback-item:first-child{margin-bottom:11px}.page__hero .page__overlay .container .page__right .page__feedback-item span{padding-right:12px;color:hsla(0,0%,100%,.6);opacity:0;cursor:default;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.page__hero .page__overlay .container .page__right .page__feedback-item .icon{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:36px;height:36px;border:2px solid hsla(0,0%,100%,.2);-webkit-border-radius:50%;border-radius:50%}@media screen and (max-width:767px){.page__hero{height:40px;margin:-34px 0 80px}.page__hero .page__overlay .container .page__left{margin-top:115px}.page__hero .page__overlay .container .page__left .page__breadcrumbs .breadcrumbs__item{color:#000;font-size:10px}.page__hero .page__overlay .container .page__left .page__title{margin-top:12px}.page__hero .page__overlay .container .page__left .page__title h1{color:#000;margin-bottom:0}.page__hero .page__overlay .container .page__right .page__feedback{display:none}}.hamburger{height:22px;right:52px;top:21px;cursor:pointer;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.hamburger,.hamburger__line{width:24px;position:absolute}.hamburger__line{height:2px;background-color:#32428d;left:0;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.hamburger__line--one{top:0}.hamburger__line--two{top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.hamburger__line--three{top:-webkit-calc(100% - 2px);top:calc(100% - 2px)}.hamburger__line.white{background-color:#fff}.hamburger.active{opacity:0}.hamburger.active,.header__menu{-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header__menu{position:fixed;right:-269px;width:269px;height:100vh;top:0;z-index:10;background:#32428d;padding:94px 26px 37px 23px}.header__menu.active{right:0}.header__menu .menu__item{max-width:190px}.header__menu .menu__item a{color:#fff;font-size:18px;text-decoration:none}.header__menu .menu__item:not(:last-child){margin-bottom:15px}.header__menu .menu__item.menu__item--drop{position:relative}.header__menu .menu__item.menu__item--drop .submenu{display:none;margin-top:10px}.header__menu .menu__item.menu__item--drop .submenu a{font-size:13px;color:hsla(0,0%,100%,.8);-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header__menu .menu__item.menu__item--drop .submenu a:hover{color:hsla(0,0%,100%,.4)}.header__menu .menu__item.menu__item--drop .submenu li:not(:last-child){margin-bottom:8px}.header__menu .menu__item.menu__item--drop .submenu-img{-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header__menu .menu__item.menu__item--drop .submenu-img.open{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.header__menu .menu__close{position:absolute;right:53px;top:22px;width:28px;height:28px;cursor:pointer}.header__menu .menu__close:after,.header__menu .menu__close:before{position:absolute;left:15px;content:" ";height:28px;width:2px;background-color:#fff}.header__menu .menu__close:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.header__menu .menu__close:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}.header__menu .menu__phone{text-align:center;position:absolute;bottom:70px;left:0;right:0}.header__menu .menu__phone a{color:#fff;font-size:24px;text-decoration:none;font-family:PT Sans Narrow,sans-serif}.header__menu .menu__mobile{display:none;margin-top:36px}.header__menu .menu__mobile .menu__feedback,.header__menu .menu__mobile .menu__feedback-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.header__menu .menu__mobile .menu__feedback-item{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header__menu .menu__mobile .menu__feedback-item:hover span{opacity:1;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header__menu .menu__mobile .menu__feedback-item:hover .icon{border:2px solid #fff}.header__menu .menu__mobile .menu__feedback-item:first-child{margin-right:8px}.header__menu .menu__mobile .menu__feedback-item span{padding-right:12px;color:hsla(0,0%,100%,.6);opacity:0;cursor:default;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header__menu .menu__mobile .menu__feedback-item .icon{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:48px;height:48px;border:2px solid hsla(0,0%,100%,.2);-webkit-border-radius:50%;border-radius:50%}.header__menu .menu__mobile .menu__feedback-item .icon img{width:25px}.header__menu .menu__mobile .menu__contacts-phone{font-size:20px;font-family:PT Sans Narrow,sans-serif}.header__menu .menu__mobile .menu__contacts-phone a{color:#fff;text-decoration:none}.header__menu .menu__mobile .menu__contacts-email{font-size:14px;font-family:PT Sans Narrow,sans-serif;text-align:right}.header__menu .menu__mobile .menu__contacts-email a{color:hsla(0,0%,100%,.6);text-decoration:none}.header__search{margin-top:37px}@media screen and (max-width:1350px){.hamburger.nested{right:0}.header__menu__close{right:26px}}@media screen and (max-width:1216px){.header__menu{padding:94px 24px 0}.header__menu .menu__close{right:26px}}@media screen and (max-width:1023px){.header__menu .menu__close{right:16px}}@media screen and (max-width:767px){.hamburger.nested{width:41px;height:41px;background:#32428d;-webkit-border-radius:50%;border-radius:50%;border:1px solid #fff}.hamburger.nested .hamburger__line{width:20px;background-color:#fff;margin-left:10px}.hamburger.nested .hamburger__line--one{top:10px}.hamburger.nested .hamburger__line--three{top:-webkit-calc(100% - 11px);top:calc(100% - 11px)}.header__menu{padding:84px 24px 0;width:100%;right:-100%;overflow:scroll}.header__menu .menu__item{max-width:100%}.header__menu .menu__phone{display:none}.header__menu .menu__mobile{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.header__menu .menu__close{right:24px}}.sidebar__menu{max-width:380px;min-width:380px;margin-bottom:24px;margin-left:36px}.sidebar__menu li{position:relative;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.sidebar__menu li:before{content:"";width:4px;height:32px;border-left:4px solid #32428d;position:absolute;left:0}.sidebar__menu li:not(:last-child){margin-bottom:8px}.sidebar__menu li:hover{background:#f4f4f4;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.sidebar__menu li a{font-size:16px;font-family:PT Sans Narrow,sans-serif;text-transform:uppercase;text-decoration:none;line-height:32px;margin-left:12px}.sidebar__menu li.active{background:#eff1fb}.sidebar__menu li.active .inner{padding:8px 0 0 8px;background:#fff}.sidebar__menu li .toggler{display:inline-block;padding:0 10px;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.sidebar__menu li .toggler.toggler-active{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.sidebar__menu ul.inner{display:none;padding-left:8px}.sidebar__menu ul.inner li{border-left:4px solid #808cc6;margin-top:8px}.sidebar__menu ul.inner li:before{content:none}.sidebar__menu ul.inner li a{text-transform:none;color:#111839;opacity:.8;font-size:13px}@media screen and (max-width:1216px){.sidebar__menu{max-width:280px;min-width:280px}}@media screen and (max-width:1023px){.sidebar__menu{max-width:250px;min-width:250px}}@media screen and (max-width:767px){.sidebar__menu{margin:32px 0 0;max-width:100%}}</style>
+
+        
+            <title>Что то пошло не так</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+        
+
+        <meta name="theme-color" class="theme-color" content="#fff">
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        
+
+        
+
+<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon.png">
+<link rel="shortcut icon" href="/static/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/static/img/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/static/img/favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="256x256" href="/static/img/favicons/android-chrome-256x256.png">
+<link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="/static/img/favicons/site.webmanifest">
+<meta name="msapplication-TileImage" content="/static/img/favicons/mstile-70x70.png">
+<meta name="msapplication-TileImage" content="/static/img/favicons/mstile-144x144.png">
+<meta name="msapplication-TileImage" content="/static/img/favicons/mstile-150x150.png">
+<meta name="msapplication-TileImage" content="/static/img/favicons/mstile-310x150.png">
+<meta name="msapplication-TileImage" content="/static/img/favicons/mstile-310x310.png">
+<meta name="msapplication-config" content="/static/img/favicons/browserconfig.xml">
+
+
+        
+    </head>
+
+    
+    <body class="body">
+
+        
+
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__top">
+                        <a href="/" class="header__left header__logo">
+                            <img src="/static/img/logo.svg" alt="Ежики и Винни!" class="logo__img">
+                            <img src="/static/img/logo-sticky.svg" alt="logo" class="logo__sticky">
+                        
+                            <div class="logo__desc"></div>
+                        
+                        </a>
+
+                        <div class="header__right header__contacts">
+                            
+                                <div class="header__contacts_phone">
+                                    <a href="tel:"></a>
+                                </div>
+                            
+
+                            
+                                <div class="header__contacts_email">
+                                    <a href="mailto:"></a>
+                                </div>
+                            
+                            
+                        </div>
+
+                    </div>
+                    <div class="header__menu">
+                        <div class="menu__close"></div>
+                        
+                    </div>
+
+                </div>
+            </header>
+
+            <main class="page">
+                <article class="page__500">
+                
+                    
+                    <div class="page__hero" style="background-image: url('/media/upload/9pUEKeVFd-k.jpg')">
+
+                        <div class="page__overlay" style="background-color: rgba(5,10,31,0.7)">
+                            <div class="container">
+                                <div class="page__left">
+                                    <div class="page__breadcrumbs">
+                                        
+                                    </div>
+                                    <div class="page__title">
+                                        <h1>Что то пошло не так</h1>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container two__column">
+                       <div class="left-column">
+                            
+
+    
+    <section class="page__content">
+        <p><span>авно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</span></p>
+    </section>
+
+
+
+
+                        </div>
+                        <div class="right-column">
+                            
+                        </div>
+
+                    </div>
+                    
+                </article>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="footer__contacts">
+                <div class="container">
+                    
+                        <div class="footer__col">
+                            <img src="/static/img/icon-footer-phone.svg" alt="icon-phone">
+                            <div>
+                                <a href="tel:"></a>
+                                <span></span>
+                            </div>
+
+                        </div>
+                    
+                    
+                        <div class="footer__col">
+                            <img src="/static/img/icon-footer-mail.svg" alt="icon-mail">
+                            <div>
+                                <a href="mailto:"></a>
+                                <span>пишите нам</span>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="footer__col">
+
+                                <img src="/static/img/icon-footer-location.svg" alt="icon-location">
+                                <div>
+                                    
+                                    
+                                    <span></span>
+                                </div>
+
+                        </div>
+                    
+                    
+                </div>
+            </div>
+
+            
+<div class="footer__nav page__500">
+    <div class="footer__overlay">
+        <div class="container">
+            <div class="footer__col footer__info">
+                
+                    <div></div>
+                
+
+                <div>Copyright © 2019 АО «Ленснабпечать»</div>
+                <div class="footer__social">
+                
+
+<nav class="social__menu">
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+</nav>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <div class="footer__developer">
+                <div class="container">
+                    <a href="" target="_blank">
+                        <img src="/static/img/developer-logo.svg" />
+                        <div></div>
+                    </a>
+                </div>
+            </div>
+            <div class="btn__up"></div>
+
+            <div id="id-call" class="mfp-hide popup-feedback">
+                <!--noindex-->
+                    
+<form action="/feedback/ajax/call/"
+      method="post" id="id_feedback_form_call"
+      class="feedback-form call" novalidate >
+
+    <input type='hidden' name='csrfmiddlewaretoken' value='lMeumfdjf825qX5HYpvcRGWdxumTftapHNBwck77LKyCuir6nDmJaYkPiVmYZZ0Q' />
+    
+    <textarea name="call-message_" style="display: none;" rows="10" cols="40" id="id_call-message_">
+</textarea>
+
+    <h3> </h3>
+
+    <div class="form__row form__group" >
+        <div class="form__col">
+            
+                
+            
+                
+            
+                
+     <div class="">
+        <label>
+            <input required type="text" name="call-company" id="id_call-company" value="">
+            <span class="form-field__title">Компания</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Обязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+                
+     <div class="">
+        <label>
+            <input required type="text" name="call-name" id="id_call-name" value="">
+            <span class="form-field__title">Ф.И.О.</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Обязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+        <div class="form__col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+     <div class="">
+        <label>
+            <input required type="text" name="call-email" id="id_call-email" value="">
+            <span class="form-field__title">Адрес электронной почты</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Обязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+                
+     <div class="">
+        <label>
+            <input required type="text" name="call-phone" id="id_call-phone" value="">
+            <span class="form-field__title">Контактный телефон:</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Необязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+                
+            
+                
+            
+        </div>
+
+        <div class="form__col form__inline">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+     <div class="">
+        <label>
+            <select required name="call-unit" id="id_call-unit">
+              
+                  <option value=""></option>
+              
+            </select>
+            <span class="form-field__title">Выберите подразделение</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Обязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+                
+     <div class="">
+        <label>
+            <input required type="textarea" name="call-message" id="id_call-message" value="">
+            <span class="form-field__title">Сообщение:</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Обязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+        </div>
+
+    </div>
+    <div class="form__row form__submit">
+
+        
+     <div class="">
+        <label>
+            <div id="id-call-captcha" class="g-recaptcha" data-sitekey="6LeijW8UAAAAAAy4r2oO3CFxsJWCMhEPD76qSggC"></div>
+
+<script>window.dispatchEvent(new Event('captchaWidgetLoaded'));</script>
+
+<noscript>
+    <div style="width: 302px; height: 352px;">
+        <div style="width: 302px; height: 352px; position: relative;">
+            <div style="width: 302px; height: 352px; position: absolute;">
+                <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeijW8UAAAAAAy4r2oO3CFxsJWCMhEPD76qSggC"
+                        frameborder="0" scrolling="no"
+                        style="width: 302px; height:352px; border-style: none;">
+                </iframe>
+            </div>
+            <div style="width: 250px; height: 80px; position: absolute; border-style: none;
+                  bottom: 21px; left: 25px; margin: 0px; padding: 0px; right: 25px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                          class="g-recaptcha-response"
+                          style="width: 250px; height: 80px; border: 1px solid #c1c1c1;
+                         margin: 0px; padding: 0px; resize: none;" value="">
+                </textarea>
+            </div>
+        </div>
+    </div>
+</noscript>
+            
+        </label>
+    </div>
+
+
+
+        <span class="form__privacy"></span>
+        <input type="submit" class="btn" value="Отправить"/>
+    </div>
+
+</form>
+
+                <!--/noindex-->
+            </div>
+
+            <div id="id-callback" class="mfp-hide popup-feedback">
+                <!--noindex-->
+                    
+<form action="/feedback/ajax/callback/"
+      method="post" id="id_feedback_form_callback"
+      class="feedback-form callback" novalidate >
+
+    <input type='hidden' name='csrfmiddlewaretoken' value='rkDmG1wZyrlvJSHdrlghCDGJzS0lSlojNl0ow6qN43R2Nd3CQz7OVV4lkj0qCReK' />
+    
+    <textarea name="callback-message_" style="display: none;" rows="10" cols="40" id="id_callback-message_">
+</textarea>
+
+    <h3></h3>
+
+    <div class="form__row form__group" >
+        <div class="form__col">
+            
+                
+            
+                
+            
+                
+     <div class="">
+        <label>
+            <input required type="text" name="callback-company" id="id_callback-company" value="">
+            <span class="form-field__title">Компания</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Обязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+                
+     <div class="">
+        <label>
+            <input required type="text" name="callback-name" id="id_callback-name" value="">
+            <span class="form-field__title">Ф.И.О.</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Обязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+                
+            
+                
+            
+        </div>
+        <div class="form__col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+     <div class="">
+        <label>
+            <input required type="text" name="callback-phone" id="id_callback-phone" value="">
+            <span class="form-field__title">Контактный телефон:</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Необязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+                
+     <div class="">
+        <label>
+            <select required name="callback-unit" id="id_callback-unit">
+              
+                  <option value=""></option>
+              
+            </select>
+            <span class="form-field__title">Выберите подразделение</span>
+            <span class="form-field__bar"></span>
+            <span class="form-field__require">Обязательное поле
+            </span>
+        </label>
+    </div>
+
+
+            
+        </div>
+    </div>
+    <div class="form__row form__submit">
+
+        
+     <div class="">
+        <label>
+            <div id="id-callback-captcha" class="g-recaptcha" data-sitekey="6LeijW8UAAAAAAy4r2oO3CFxsJWCMhEPD76qSggC"></div>
+
+<script>window.dispatchEvent(new Event('captchaWidgetLoaded'));</script>
+
+<noscript>
+    <div style="width: 302px; height: 352px;">
+        <div style="width: 302px; height: 352px; position: relative;">
+            <div style="width: 302px; height: 352px; position: absolute;">
+                <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeijW8UAAAAAAy4r2oO3CFxsJWCMhEPD76qSggC"
+                        frameborder="0" scrolling="no"
+                        style="width: 302px; height:352px; border-style: none;">
+                </iframe>
+            </div>
+            <div style="width: 250px; height: 80px; position: absolute; border-style: none;
+                  bottom: 21px; left: 25px; margin: 0px; padding: 0px; right: 25px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                          class="g-recaptcha-response"
+                          style="width: 250px; height: 80px; border: 1px solid #c1c1c1;
+                         margin: 0px; padding: 0px; resize: none;" value="">
+                </textarea>
+            </div>
+        </div>
+    </div>
+</noscript>
+            
+        </label>
+    </div>
+
+
+
+        <span class="form__privacy"></span>
+        <input type="submit" class="btn" value="Отправить"/>
+    </div>
+
+</form>
+
+                <!--/noindex-->
+            </div>
+
+        </footer>
+
+        
+            <link rel="stylesheet" href="/static/bundle/bundle.10624d4d725d67448165.css">
+        
+
+        
+            <script rel="stylesheet" src="/static/bundle/bundle.10624d4d725d67448165.js"></script>
+            <script src="//www.google.com/recaptcha/api.js?onload=captchaReady&render=explicit&hl=ru" async defer></script>
+            <script type="application/ld+json">
+                {
+                    "@context": "http://schema.org",
+                    "@type": "Organization",
+                    "url" : "http://localhost:8000",
+                    "logo" : "http://localhost:8000/static/img/logo.svg",
+                    "name": "Ежики и Винни!",
+                    "description": "",
+                    "email": "",
+                    "telephone": "",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressCountry" "RU",
+                        "addressLocality": "",
+                        "postalCode": "",
+                        "streetAddress": "",
+                    },
+                }
+            </script>
+        
+
+        
+    </body>
+    
+</html>

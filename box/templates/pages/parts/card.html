@@ -1,0 +1,21 @@
+
+<a href="{{ obj.get_absolute_url }}" class="card card__page">
+    <div class="card__item">
+        {% if obj.image %}
+            <picture>
+                <source srcset="{{ obj.image.img384x264.url }}" media="(min-width: 1216px)"/>
+                <source srcset="{{ obj.image.img288x200.url }}" media="(min-width: 1024px)"/>
+                <source srcset="{{ obj.image.img216x150.url }}" media="(min-width: 768px)"/>
+                <source srcset="{{ obj.image.img288x200.url }}" media="(min-width: 320px)"/>
+                <img src="{{ obj.image.img384x264.url }}" alt="{{ obj.image.title }}"/>
+            </picture>
+        {% endif %}
+        <div class="card__info">
+            <div class="card__title">{{ obj.title }}</div>
+            {% if obj.description %}
+                <div class="card__description card__description--oversize">{{ obj.description|safe }}</div>
+            {% endif %}
+        </div>
+    </div>
+</a>
+

@@ -1,0 +1,68 @@
+{% extends 'catalog/base.html' %}
+{% load base_tags feedback_tags %}
+
+{% block article_selector %}product{% endblock %}
+
+{% block content %}
+
+    <section class="item__block">
+        {% with object.images as images %}
+        <div class="item__slider">
+        {% if images %}
+            <div class="item__slider-for mfp-gallery">
+                {% for image in images %}
+                    <a href="{{ image.display.url }}" class="item__slide">
+                        <picture>
+                            <source srcset="{{ image.img384x288.url }}" media="(min-width: 1920px)"/>
+                            <source srcset="{{ image.img288x216.url }}" media="(min-width: 1024px)"/>
+                            <source srcset="{{ image.img256x192.url }}" media="(min-width: 768px)"/>
+                            <source srcset="{{ image.img288x216.url }}" media="(min-width: 320px)"/>
+                            <img src="{{ image.img384x288.url }}" title="{{ image.title|default:'' }}"  alt="{{ image.title|default:'' }}">
+                        </picture>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="item__slider-nav">
+                {% for image in images %}
+                    <div class="item__slide">
+                        <img src="{{ image.img80x56.url }}" title="{{ image.title|default:'' }}"  alt="{{ image.title|default:'' }}">
+                    </div>
+                {% endfor %}
+            </div>
+
+        {% endif %}
+    </div>
+        {% endwith %}
+    <div class="item__description">
+        <div class="item__price">
+            {% if object.price %}{{ object.price }}{% endif %}
+        </div>
+        <a href="#id-order" class="mfp-open btn btn--yellow">Отправить заявку</a>
+        <div id="id-order" class="mfp-hide popup-feedback">
+            <!--noindex-->
+                {% show_feedback 'order' %}
+            <!--/noindex-->
+        </div>
+        <div class="item__vendor">{% if object.vendor_code %}АРТ. {{ object.vendor_code }}{% endif %}</div>
+        {% with object.get_produser as produser %}
+            {% if produser %}
+                {% if produser.show_link %}
+                    <div class="item__producer">
+                     <span>Производитель: <a href="{{ produser.get_absolute_url }}">{{ produser.title }}</a></span> </div>
+                {% else %}
+                    <div class="item__producer">
+                        <span>Производитель: {{ produser.title }}</span>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    </section>
+
+    {% show_block_content object.main_content %}
+
+    {% show_block_content object.content_1 %}
+
+    {% show_block_content object.content_2 %}
+
+{% endblock %}

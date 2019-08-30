@@ -1,0 +1,124 @@
+.card
+    opacity: 1
+    margin: 0 16px 32px
+    &__item
+        position: relative
+        display: block
+    &__info
+        background: #111839CC
+        position: absolute
+        height: 72px
+        width: 100%
+        z-index: 2
+        bottom: 4px
+        padding: 24px
+        +transition
+        &:hover
+            height: 128px
+        &:hover .card__description
+            opacity: 1
+            +transition
+        .card
+            &__date
+                color: $opacity80
+                font-size: 11px    
+            &__title
+                font-size: $font17
+                font-family: $extra-fonts
+                color: $white
+                text-transform: uppercase
+            &__description
+                font-size: $font13
+                margin-top: 16px
+                color: $opacity80
+                opacity: 0
+                +transition
+            &__producer
+                margin-top: 8px
+                font-size: $font13
+                color: $white
+                span
+                    text-decoration: underline
+                    &:hover
+                        text-decoration: none
+    &.card__product
+        .card__info
+            height: 96px
+            &:hover
+                height: 144px
+
+    &.card__news
+        .card
+            &__info
+                height: 112px
+                &:hover
+                    height: 144px
+            &__description
+                margin-top: 8px
+
+
+//Tablet
+@media screen and (max-width: 1216px)
+    .card
+        &__item
+            width: 288px
+            height: 200px
+        &__info
+            bottom: 0
+            height: 64px
+            padding: 10px 24px
+            &:hover
+                height: 104px
+        &.card__product
+            .card__info
+                height: 64px
+                padding: 16px 24px
+                &:hover
+                    height: 120px
+                .card__producer
+                    margin-top: 0
+
+@media screen and (max-width: 1023px)
+    .card
+        margin: 0 8px 32px
+        .card
+            &__item
+                width: 216px
+                height: 150px
+            &__info
+                height: auto
+                padding: 16px
+                max-height: 100%
+                &:hover
+                    height: auto
+            &__description
+                opacity: 1
+                margin-top: 8px
+                font-size: 12px
+        &.card__product
+            .card
+                &__info
+                    height: auto
+                    padding: 16px
+                    max-height: 100%
+                    &:hover
+                        height: auto
+
+@media screen and (max-width: 767px)
+    .card
+        .card
+            &__item
+                width: 288px
+                height: 200px
+        &.card__news
+            .card
+                &__date
+                    font-size: 10px
+                &__title
+                    font-size: $font14
+                &__info
+                    height: auto
+                &__description
+                    display: block
+                    opacity: 1
+                    font-size: 12px

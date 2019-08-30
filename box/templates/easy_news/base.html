@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load base_tags custom_news_tags %}
+
+{% block content_title %}{{ object.title }}{% endblock %}
+
+{% block sidebar %}
+    {% show_news_sidebar %}
+{% endblock %}

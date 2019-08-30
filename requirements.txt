@@ -1,0 +1,31 @@
+# System wide
+# Pillow==3.1.2
+# psycopg2==2.6.1
+# requests==2.18.4
+# six==1.10.0
+
+# Local wide
+#django-debug-toolbar==1.11
+
+unidecode==1.1.0
+xlsxwriter==1.1.8
+unicodecsv==0.14.1
+
+Django==1.11.*
+django-imagekit==0.3.3
+django-mptt==0.9.1
+django_tinymce==2.6.0
+dj-pagination==2.4.0
+django-modeladmin-reorder==0.3.1
+
+git+git://github.com/oldroute/django-catalog-tree@1.11
+git+git://github.com/oldroute/django-treemenus@1.11
+git+git://github.com/oldroute/django-simple-feedback.git@antispam-1.11
+git+git://github.com/oldroute/django-tinymce-attachment@1.11
+git+git://github.com/oldroute/django-nocaptcha-recaptcha.git
+git+git://github.com/oldroute/django-chunks.git@1.11
+git+git://github.com/oldroute/django-easy-news.git@1.11
+git+git://github.com/oldroute/django-seo.git@1.11
+git+git://github.com/oldroute/django-import-redirects@1.11
+git+git://github.com/oldroute/django-filebrowser-no-grappelli.git
+git+git://github.com/redsolution/django-page-cms@1.11

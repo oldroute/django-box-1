@@ -1,0 +1,121 @@
+{% extends 'pages/base.html' %}
+{% load static feedback_tags treemenus_tags seo_tags base_tags gallery_tags %}
+
+{% block body %}
+
+    <body class="body fp">
+        {{ chunks.top_of_body.content }}
+
+        {% get_hero as hero %}
+        <div class="container__hero">
+            <div class="overlay" style="background-color: rgba(5,10,31,{{ hero.overlay_opacity }});"></div>
+            <video loop="true" muted="true" {% if hero %}poster="{{ hero.image.url }}{% endif %}">
+                {% if hero.video %}<source src="{{ hero.video.url }}" type="video/mp4">{% endif %}
+            </video>
+        </div>
+
+        <div class="fp wrapper">
+            <header class="header">
+                <div class="container container__right">
+                    <div class="hamburger">
+                        <div class="hamburger__line hamburger__line--one white"></div>
+                        <div class="hamburger__line hamburger__line--two white"></div>
+                        <div class="hamburger__line hamburger__line--three white"></div>
+                    </div>
+                   <div class="header__menu">
+                        <div class="menu__close"></div>
+                        {% block header_menu %}
+                            {% show_menu 'header_menu' %}
+
+                            {% if chunks.yandex_search_form %}
+                                <div class="search__form header__search">{{ chunks.yandex_search_form.content }}</div>
+                            {% endif %}
+
+                            {% if chunks.phone %}
+                                <div class="menu__phone">
+                                    <a href="tel:{{ chunks.phone.content|cut:' ' }}">{{ chunks.phone.content }}</a>
+                                </div>
+                            {% endif %}
+                            <div class="menu__mobile">
+                                <div class="menu__feedback">
+                                    <div class="menu__feedback-item">
+                                        <a href="#id-call" class="mfp-open icon icon__write"><img src="{% static 'img/icon-envelope.svg' %}" alt="Написать нам"></a>
+                                    </div>
+                                     <div class="menu__feedback-item">
+                                        <a href="#id-callback" class="mfp-open icon icon__write"><img src="{% static 'img/icon-phone.svg' %}" alt="Заказать обратный звонок"></a>
+                                    </div>
+                                </div>
+
+                                <div class="menu__contacts">
+                                    {% if chunks.phone %}
+                                    <div class="menu__contacts-phone">
+                                        <a href="tel:{{ chunks.phone.content|cut:' ' }}">{{ chunks.phone.content }}</a>
+                                    </div>
+                                    {% endif %}
+
+                                    {% if chunks.email %}
+                                    <div class="menu__contacts-email">
+                                        <a href="mailto:{{ chunks.email.content }}">{{ chunks.email.content }}</a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                
+                            </div>
+
+                        {% endblock %}
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    {% show_menu "circle_menu" %}
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="container container__right">
+                <div class="footer__col">
+                    <div class="footer__feedback">
+                        <div class="footer__feedback-item">
+                            <span>Написать нам</span>
+                            <a href="#id-call" class="mfp-open icon icon__write"><img src="{% static 'img/icon-envelope.svg' %}" alt="Написать нам"></a>
+                        </div>
+                         <div class="footer__feedback-item">
+                            <span>Заказать обратный звонок</span>
+                            <a href="#id-callback" class="mfp-open icon icon__write"><img src="{% static 'img/icon-phone.svg' %}" alt="Заказать обратный звонок"></a>
+                        </div>
+                    </div>
+                    {% if chunks.phone %}
+                        <div class="footer__phone">
+                            <a href="tel:{{ chunks.phone.content|cut:' ' }}">{{ chunks.phone.content }}</a>
+                        </div>
+                    {% endif %}
+                    {% if chunks.email %}
+                        <div class="footer__email">
+                            <a href="mailto:{{ chunks.email.content }}">{{ chunks.email.content }}</a>
+                        </div>
+                    {% endif %}
+                </div>
+                <div id="id-call" class="mfp-hide popup-feedback">
+                    <!--noindex-->
+                        {% show_feedback 'call' %}
+                    <!--/noindex-->
+                </div>
+
+                <div id="id-callback" class="mfp-hide popup-feedback">
+                    <!--noindex-->
+                        {% show_feedback 'callback' %}
+                    <!--/noindex-->
+                </div>
+            </div>
+        </footer>
+        {% block css %}{{ block.super }}{% endblock %}
+        {% block js %}
+            {{ block.super }}
+            <script>window.dispatchEvent(new Event('pageFrontpageLoaded'));</script>
+        {% endblock %}
+
+        {{ chunks.end_of_body.content }}
+    </body>
+{% endblock %}

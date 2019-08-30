@@ -1,0 +1,47 @@
+.btn
+    display: block
+    text-transform: uppercase
+    font-size: $font16
+    padding: 15px 21px 14px 19px
+    background: $main-color
+    color: $white
+    text-decoration: none
+    border-radius: 4px
+    text-align: center
+    -webkit-appearance: none
+    &:active
+        position: relative
+        top: 1px
+    &.btn--service
+        width: 184px
+        margin-left: 36px
+    &.btn--yellow
+        background: $yellow-color
+        color: $black
+        width: 193px
+        margin-top: 16px
+
+.btn__up
+    display: none
+    position: fixed
+    right: 24px
+    bottom: 32px
+    cursor: pointer
+    &.btn__up--active
+        display: block
+
+
+@media screen and (max-width: 1023px)
+    .btn
+        padding: 12px
+        font-size: $font14
+        &.btn--yellow
+            width: 160px
+//Mobile
+@media screen and (max-width: 767px)
+    .btn
+        &.btn--yellow
+            width: 193px
+            margin: 16px auto 0
+        &.btn--service
+            margin: 36px 0 0

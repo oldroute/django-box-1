@@ -1,0 +1,55 @@
+{% extends 'catalog/base.html' %}
+{% load base_tags %}
+
+{% block breadcrumbs %}
+    <a class="breadcrumbs__item" href="/"><span>Главная</span></a>
+{% endblock %}
+
+{% block article_selector %}catalog{% endblock %}
+
+{% block sidebar %}{% endblock %}
+
+{% block content %}
+
+    {% show_block_content object.main_content %}
+
+    <section class="root">
+        {% for section in object.get_menu_sections %}
+            <div class="section" style="background-image: url('{{ section.image.image.url }}')">
+                <div class="section__slide">
+                    <div class="section__slide-container">
+                    {% if section.children.col_1 %}
+                        <div class="section__col-1 section__line">
+                            {% for subsection in section.children.col_1 %}
+                                <a class="subsection" href="{{ subsection.get_absolute_url }}">{{ subsection.title }}</a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if section.children.col_2 %}
+                        <div class="section__col-2 section__line">
+                            {% for subsection in section.children.col_2 %}
+                                <a class="subsection" href="{{ subsection.get_absolute_url }}">{{ subsection.title }}</a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="section__arrow"></div>
+                </div>
+
+                <div class="section__name">
+                    <a href="{{ section.get_absolute_url }}">{{ section.title }}</a>
+                </div>
+
+            </div>
+        {% endfor %}
+    </section>
+
+    {% show_block_content object.bottom_content %}
+
+
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script>window.dispatchEvent(new Event('pageCatalogLoaded'))</script>
+{% endblock %}

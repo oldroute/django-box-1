@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+{% load custom_pages_tags pages_tags base_tags %}
+
+{% block article_selector %}project{% endblock %}
+
+{% block content %}
+
+    {% placeholder hide_from_sidebar with Checkbox as hide_from_sidebar %}
+    {% placeholder hide_child_pages_from_sidebar with Checkbox as hide_child_pages_from_sidebar %}
+    {% placeholder description with LargeTextarea as description %}
+    {% placeholder main_content with TinyMCE as main_content %}
+    {% placeholder bottom_content with TinyMCE as bottom_content %}
+
+    {% show_block_content main_content %}
+
+    {% show_block_gallery %}
+
+    {% show_block_content bottom_content %}
+
+{% endblock %}

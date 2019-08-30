@@ -1,0 +1,136 @@
+.root
+    .section
+        opacity: 1
+        background-position: center
+        background-size: cover
+        display: flex
+        &__slide
+            padding: 32px 24px
+            background: $main-color
+            width: 48px
+            position: relative
+            +flex(flex-start, flex-start)
+            flex-direction: row
+            transition: all 1s ease
+            &-container
+                display: flex
+                justify-content: flex-start
+            a
+                color: #FEFFFECC
+                text-decoration: none
+            &.active
+                width: 130%
+                opacity: 1
+            .section
+                &__line
+                    display: flex
+                    flex-direction: column
+                    &.active
+                        opacity: 1
+                &__col-1, &__col-2, &__col-3
+                    line-height: 24px
+                    .subsection
+                        white-space: nowrap
+                        &:not(:last-child)
+                            padding-right: 65px
+                &__arrow
+                    +flex(center, flex-end)
+                    height: 100%
+                    padding: 0 14.5px
+                    position: absolute
+                    right: 0
+                    top: 0
+                    &:after
+                        content: ""
+                        display: inline-block
+                        width: 10px
+                        height: 10px
+                        transform-origin: center
+                        border-right: 2px solid $white
+                        border-bottom: 2px solid $white
+                        transform: rotate(-45deg)
+                        margin-right: 5px
+                        transition: 0.3s
+                    &.active
+                        &:after
+                            transform: rotate(135deg)
+                            margin-right: 0
+
+        &__name
+            +flex(center, flex-start)
+            text-transform: uppercase
+            font-size: $font24
+            font-family: $extra-fonts
+            padding-left: 14px
+            border-left: 2px solid $white
+            background-color: rgba(5,10,31,0.7)
+            width: 100%
+            a
+                color: $white
+                text-decoration: none
+
+
+@media screen and (max-width: 1023px)
+    .root
+        .section
+            &__slide
+                &.active
+                    width: 100%
+
+//Mobile
+@media screen and (max-width: 767px)
+            
+    .root
+        .section
+            flex-direction: column-reverse
+            min-height: auto
+            height: auto
+            &__slide
+                padding: 0 24px
+                width: auto
+                display: block
+                &.active
+                    padding: 20px 24px 0
+                &-container
+                    flex-direction: column
+                    align-items: flex-start
+                .section
+                    &__line
+                        display: block
+                        opacity: 0
+                        margin-bottom: 0px
+                        height: 0px
+                        overflow: hidden
+                        transition: opacity 1s ease
+                        &.active
+                            // height set from js
+                            opacity: 1
+
+                    &__col-1, &__col-2, &__col-3
+                        text-align: left
+                        padding-left: 0
+                        .subsection
+                            display: block
+                            &:not(:last-child)
+                                padding-right: 0
+                    &__arrow
+                        display: block
+                        position: static
+                        width: 100%
+                        padding: 18px 0
+                        text-align: center
+                        &::after
+                            transform: rotate(45deg)
+                        &.active
+                            &:after
+                                transform: rotate(225deg)
+
+
+
+            &__name
+                height: 80px
+                padding: 24px 16px
+                border-left: 0
+                border-bottom: 2px solid $white
+                font-size: $font20
+            

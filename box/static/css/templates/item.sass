@@ -1,0 +1,154 @@
+.item
+    &__block
+        display: flex
+        margin-bottom: 40px
+    &__slider
+        opacity: 1
+        flex: 1
+        max-width: 384px
+        display: flex
+        flex-direction: column
+        .slick
+            &-list
+                padding: 0 !important
+                &--center
+                    margin: 0 auto !important
+
+            &-slider
+                margin: 0
+            &-dots
+                bottom: 10px
+                li
+                    button
+                        &:before
+                            font-size: 40px
+                            color: #fff
+        &-for
+            flex: 1
+            background-size: auto
+            display: none
+        &-nav
+            margin: 24px 0 0 0 !important
+            display: none
+            .item__slide
+                height: 56px
+            .slick
+                &-list
+                    width: 272px
+                    //margin: 0 auto
+                &-arrow
+                    background: none
+                    border: none
+                &-next
+                    right: -20px
+                &-prev
+                    left: -20px
+    &__slide
+        margin: 0
+        cursor: pointer
+        img
+            display: block
+            margin: 0 auto
+            height: 100%
+    &__description
+        margin-left: 32px
+        .item
+            &__price
+                font-family: $extra-fonts
+                font-size: $font22
+                font-weight: bold
+                color: $main-color
+                line-height: 40px
+                text-transform: uppercase
+            &__producer
+                margin-top: 10px
+            &__vendor
+                margin-top: 8px
+                line-height: 30px
+                font-family: $extra-fonts
+                font-size: $font20
+                color: #AEAEAE
+
+.slick-slide.slick-current.slick-active
+    display: flex
+    justify-content: center
+
+//Tablet
+@media screen and (max-width: 1216px)
+    .item
+        &__slider
+            max-width: 288px
+            .slick
+                &-track
+                    padding-left: 10px
+            &-nav
+                .slick
+                    &-next
+                        right: -30px
+
+        &__slide
+            img
+                margin: 0
+
+@media screen and (max-width: 1023px)
+    .item
+        &__slider
+            max-width: 256px
+            &-nav
+                .item__slide
+                    height: 49px
+                .slick
+                    &-next
+                        right: -35px
+                        bottom: 1px
+                    &-prev
+                        left: -30px
+                        bottom: 1px
+        &__description
+            .item
+                &__price
+                    line-height: normal
+
+
+//Mobile
+@media screen and (max-width: 767px)
+    .item
+        &__block
+            flex-direction: column
+            align-items: center
+        &__slider
+            max-width: 268px
+            &-nav
+                .item__slide
+                    height: 56px
+                .slick
+                    &-next
+                        right: -40px
+                    &-prev
+                        left: -40px
+                .slick
+                    &-list
+                        left: 5px
+            .slick
+                &-track
+                    padding-left: 0
+        &__description
+            text-align: center
+            margin-left: 0
+            .item
+                &__price
+                    margin-top: 16px
+                &__vendor
+                    margin-top: 11px
+                &__producer
+                    margin-top: 8px
+
+
+//Micro mobile
+@media screen and (max-width: 350px)
+    .item
+        &__slider
+            max-width: 240px
+            &-nav
+                .item__slide
+                    height: 50px

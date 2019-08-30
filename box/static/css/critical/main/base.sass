@@ -1,0 +1,85 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    &:focus
+        outline: none !important
+a
+    color: $main-color
+    cursor: pointer
+    &:hover
+        text-decoration: none
+
+html
+    height: 100%
+
+body
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    font-family: $main-fonts
+    font-size: $font14
+
+.container
+    +container($container-width,0,100%)
+    &__right
+        display: flex
+        justify-content: flex-end
+        width: auto
+        max-width: none
+        margin: 0 52px
+.two__column
+    display: flex
+    justify-content: flex-start
+    .left-column
+        width: 800px
+    .page__content, .sidebar__menu
+        flex: 1
+.page__block-cards
+    +flex(flex-start,flex-start)
+    margin: 0 -16px -32px
+    flex-wrap: wrap
+.card
+    opacity: 0
+    transition: all 1s ease
+    &__item
+        position: relative
+        display: block
+        width: 384px
+        height: 268px
+
+.right-column
+    position: sticky
+    top: 88px
+.mfp-hide
+    display: none !important
+
+//Tablet
+@media screen and (max-width: 1216px)
+    .container
+        padding: 0 48px
+    .two__column
+        .left-column
+            width: 608px
+
+@media screen and (max-width: 1023px)
+    .container
+        padding: 0 16px
+    .page__block-cards
+        margin: 0 -16px -32px
+    .two__column
+        .left-column
+            width: 448px
+//Mobile
+@media screen and (max-width: 767px)
+    .two__column
+        flex-direction: column
+        .left-column
+            width: 100%
+    .right-column
+        width: 100%
+        margin-top: 36px
+    .page__block-cards
+        justify-content: center
+        margin: 0 -16px -32px

@@ -1,0 +1,36 @@
+{% load base_tags %}
+{% if pages|length > 1 %}
+   {% get_custom_pagination page_obj.number pages as nav %}
+
+    <div class="pagination">
+        <div class="pagination__items">
+         <div class="pagination__item first">
+                <a href="?{{ getvars }}{{ hashtag }}">в начало</a>
+            </div>
+        {% if nav.prev %}
+            <a class="pagination__item prev" href="?{% if page != 1 %}page={{ nav.prev }}{% endif %}{{ getvars }}{{ hashtag }}">
+                <img src="/static/img/arrow.svg" alt="icon-prev">
+            </a>
+        {% endif %}
+        {% for page in nav.pages %}
+            {% ifequal page page_obj.number %}
+                <div class="pagination__item active">
+                    <span>{{ page_obj.number }}</span>
+                </div>
+            {% else %}
+                <a class="pagination__item current" href="{% if page != 1 %}?page={{ page }}{{ getvars }}{{ hashtag }}{% else %}{{ request.path }}{% endif %}">
+                    <span>{{ page }}</span>
+                </a>
+            {% endifequal %}
+        {% endfor %}
+        {% if nav.next %}
+            <a class="pagination__item next" href="?{% if page != 1 %}page={{ nav.next }}{% endif %}{{ getvars }}{{ hashtag }}">
+                <img src="/static/img/arrow.svg" alt="icon-next">
+            </a>
+        {% endif %}
+             <div class="pagination__item last">
+                <a href="?page={{ nav.last }}{{ getvars }}{{ hashtag }}">в конец</a>
+            </div>
+        </div>
+    </div>
+{% endif %}
