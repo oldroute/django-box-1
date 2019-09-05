@@ -1,0 +1,36 @@
+.pagination
+    &__items
+        +flex(center, flex-start)
+        .pagination
+            &__item
+                padding: 8px 12px
+                +transition
+                &.next
+                    transform: rotate(180deg)
+                    height: 32px
+                    width: 32px
+                &.prev
+                    height: 32px
+                    width: 32px
+                &:not(:last-child)
+                    margin-right: 8px
+        a, span
+            opacity: 0.8
+            text-decoration: none
+            font-size: $font13
+//Mobile
+@media screen and (max-width: 767px)
+    .pagination
+            &__items
+            .pagination
+                &__item
+                    padding: 8px 10px
+
+
+//Mobile 320
+@media screen and (max-width: 355px)
+        .pagination
+            &__items
+            .pagination
+                &__item
+                    padding: 6px 8px

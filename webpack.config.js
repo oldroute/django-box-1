@@ -12,11 +12,11 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 let conf = {
     entry: {
-        bundle: './lsnab/static/index.js',
-        critical: './lsnab/static/critical.js',
+        bundle: './{{ project_name }}/static/index.js',
+        critical: './{{ project_name }}/static/critical.js',
     },
     output: {
-        path: path.join(__dirname, './lsnab/static/bundle/'),
+        path: path.join(__dirname, './{{ project_name }}/static/bundle/'),
         filename: '[name].[hash].js',
         publicPath: '',
     },
@@ -104,7 +104,7 @@ let conf = {
             targetName: 'critical.css'
         }),
         new ReplaceHashInFileWebpackPlugin([{
-            dir: './lsnab/templates',
+            dir: './{{ project_name }}/templates',
             files: ['base.html'],
             rules: [{
                 search: /bundle\.*[a-zA-Z0-9]*\.js/,
@@ -118,15 +118,15 @@ let conf = {
         new FileManagerPlugin({
             onStart: [{
                 delete: [
-                 './lsnab/static/bundle/'
+                 './{{ project_name }}/static/bundle/'
                 ],
             }],
             onEnd: [{
                 delete: [
-                 './lsnab/static/bundle/critical.*.js'
+                 './{{ project_name }}/static/bundle/critical.*.js'
                 ],
                 move: [
-                    { source: './lsnab/static/bundle/critical.css', destination: './lsnab/templates/parts/critical.css' },
+                    { source: './{{ project_name }}/static/bundle/critical.css', destination: './{{ project_name }}/templates/parts/critical.css' },
                 ],
             }]
         })

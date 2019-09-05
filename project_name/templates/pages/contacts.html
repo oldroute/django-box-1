@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+{% load pages_tags base_tags %}
+
+{% block article_selector %}contacts{% endblock %}
+
+{% block content %}
+
+    {% placeholder main_content with TinyMCE label 'Контент страницы' as main_content %}
+    {% placeholder map with LargeTextarea label 'Скрипт карты' as map %}
+    {% placeholder bottom_content with TinyMCE label 'Контент внизу страницы' as bottom_content %}
+
+    {% show_block_content main_content %}
+
+    <section class="page__map">
+        {{ map|safe }}
+    </section>
+
+    {% show_block_content bottom_content %}
+
+{% endblock %}

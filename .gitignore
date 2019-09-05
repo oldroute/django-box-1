@@ -16,7 +16,7 @@
 /node_modules/*
 .sublime-gulp.cache
 /media.tar
-/lsnab/settings.py
-/lsnab/templates/service/500.html
-/lsnab/templates/service/404.html
-/lsnab/templates/service/robots.txt
+/{{ project_name }}/settings.py
+/{{ project_name }}/templates/service/500.html
+/{{ project_name }}/templates/service/404.html
+/{{ project_name }}/templates/service/robots.txt

@@ -1,7 +1,7 @@
 {
-  "name": "lsnab",
+  "name": "{{ project_name }}",
   "version": "1.0.0",
-  "description": "lsnab",
+  "description": "{{ project_name }}",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>{% load static feedback_tags treemenus_tags seo_tags base_tags %}{% smart_spaceless %}
+<html lang="ru">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+        <style>{% include 'parts/critical.css' %}</style>
+
+        {% block seo %}
+            {% seo object title_default=object.title|default:"" %}
+        {% endblock %}
+
+        <meta name="theme-color" class="theme-color" content="#fff">
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        {% if request.GET.page > 1 %}<link rel="canonical" href="{{ request.path }}">{% endif %}
+
+        {% include 'parts/block_favicon.html' %}
+
+        {{ chunks.end_of_head.content }}
+    </head>
+
+    {% block body %}
+    <body class="body">
+
+        {{ chunks.top_of_body.content }}
+
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__top">
+                        <a href="/" class="header__left header__logo">
+                            <img src="{% static 'img/logo.svg' %}" alt="{% if chunks.name %}{{ chunks.name.content }}{% endif %}" class="logo__img">
+                            <img src="{% static 'img/logo-sticky.svg' %}" alt="logo" class="logo__sticky">
+                        {% if chunks.description %}
+                            <div class="logo__desc">{{ chunks.description.content }}</div>
+                        {% endif %}
+                        </a>
+
+                        <div class="header__right header__contacts">
+                            {% if chunks.phone.content %}
+                                <div class="header__contacts_phone">
+                                    <a href="tel:{{ chunks.phone.content|cut:' ' }}">{{ chunks.phone.content }}</a>
+                                </div>
+                            {% endif %}
+
+                            {% if chunks.email.content %}
+                                <div class="header__contacts_email">
+                                    <a href="mailto:{{ chunks.email.content }}">{{ chunks.email.content }}</a>
+                                </div>
+                            {% endif %}
+                            <div class="hamburger nested">
+                                <div class="hamburger__line hamburger__line--one"></div>
+                                <div class="hamburger__line hamburger__line--two"></div>
+                                <div class="hamburger__line hamburger__line--three"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="header__menu">
+                        <div class="menu__close"></div>
+                        {% block header_menu %}
+                            {% show_menu 'header_menu' %}
+
+                            {% if chunks.yandex_search_form.content %}
+                                <div class="search__form header__search">{{ chunks.yandex_search_form.content }}</div>
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </header>
+
+            <main class="page">
+                <article class="{% block article_selector %}{% endblock %}">
+                {% block article %}
+                    <div class="container">
+                        <div class="page__breadcrumbs">
+                            {% block breadcrumbs %}
+                                <a class="breadcrumbs__item" href="/"><span>Главная</span></a>
+                            {% endblock %}
+                        </div>
+                        <div class="page__title">
+                            <h1>{% block content_title %}{{ object.title|default:"" }}{% endblock %}</h1>
+                        </div>
+                    </div>
+                    <div class="container">
+                        {% block content %}{% endblock %}
+                    </div>
+                {% endblock %}
+                </article>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="footer__contacts">
+                <div class="container">
+                    {% if chunks.phone.content or chunks.working_hours %}
+                        <div class="footer__col">
+                            <img src="{% static 'img/icon-footer-phone.svg' %}" alt="icon-phone">
+                            <div>
+                                <a href="tel:{{ chunks.phone.content|cut:' ' }}">{{ chunks.phone.content }}</a>
+                                <span>{{ chunks.working_hours.content }}</span>
+                            </div>
+
+                        </div>
+                    {% endif %}
+                    {% if chunks.email.content %}
+                        <div class="footer__col">
+                            <img src="{% static 'img/icon-footer-mail.svg' %}" alt="icon-mail">
+                            <div>
+                                <a href="mailto:{{ chunks.email.content }}">{{ chunks.email.content }}</a>
+                                <span>пишите нам</span>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if chunks.address_postal_code or chunks.address_city %}
+                        <div class="footer__col">
+                            <img src="{% static 'img/icon-footer-location.svg' %}" alt="icon-location">
+                            <div>
+                                {% if chunks.address_postal_code.content %}{{ chunks.address_postal_code.content }}, {% endif %}
+                                {{ chunks.address_city.content }}
+                                <span>{{ chunks.address_street_and_home.content }}</span>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% block footer_nav %}
+            <div class="footer__nav">
+                <div class="container">
+                    <div class="footer__col footer__navigate">
+                        {% show_menu 'footer_menu' %}
+                    </div>
+                    {% if chunks.yandex_search_form.content %}
+                        <div class="footer__col">
+                            <div class="search__form footer__search">{{ chunks.yandex_search_form.content }}</div>
+                        </div>
+                    {% endif %}
+                    <div class="footer__col footer__info">
+                        {% if chunks.description_footer %}
+                            <div>{{ chunks.description_footer.content }}</div>
+                        {% endif %}
+
+                        <div>Copyright © {% now "Y" %} «Название компании»</div>
+
+                        <div class="footer__social">
+                            {% show_menu 'social_menu' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+
+            <div class="footer__developer">
+                <div class="container">
+                    <a href="{{ chunks.developer_url.content }}" target="_blank">
+                        <img src="{% static 'img/developer-logo.svg' %}" />
+                        {% if chunks.developer_slogan %}<div>{{ chunks.developer_slogan.content }}</div>{% endif %}
+                    </a>
+                </div>
+            </div>
+            <div class="btn__up"></div>
+
+            <div id="id-call" class="mfp-hide popup-feedback">
+                <!--noindex-->
+                    {% show_feedback 'call' %}
+                <!--/noindex-->
+            </div>
+
+        </footer>
+        {% block css %}
+            <link rel="stylesheet" href="{% static 'bundle/bundle.c57861ec54a04650e357.css' %}">
+        {% endblock %}
+
+        {% block js %}
+            <script rel="stylesheet" src="{{ STATIC_URL }}bundle/bundle.c57861ec54a04650e357.js"></script>
+            <script src="//www.google.com/recaptcha/api.js?onload=captchaReady&render=explicit&hl=ru" async defer></script>
+        {% endblock %}
+
+        {{ chunks.end_of_body.content }}
+    </body>
+    {% endblock body %}
+</html>
+{% end_smart_spaceless %}
