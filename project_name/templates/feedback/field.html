@@ -1,3 +1,5 @@
+{% load base_tags %}
+
 {% if input_type == 'hidden' %}
      {{ field }}
 {% elif field.name == 'captcha' %}
@@ -13,7 +15,7 @@
             {% if field.label %}<span class="form-field__title">{{ field.label }}</span>{% endif %}
             <select required name="{{ field.html_name }}" id="id_{{ field.html_name }}">
               {% for value, name in field.field.choices %}
-                  <option value="{{ value }}">{{ name }}</option>
+                    <option {% if field.value|equal:value %}selected{% endif %} value="{{ value }}">{{ name }}</option>
               {% endfor %}
             </select>
         </label>

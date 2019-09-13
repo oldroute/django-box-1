@@ -86,3 +86,11 @@ def smart_spaceless(parser, token):
     nodelist = parser.parse(('end_smart_spaceless',))
     parser.delete_first_token()
     return SmartSpacelessNode(nodelist)
+
+
+@register.filter
+def equal(val1, val2):
+
+    """ Сравнение значений разных типов через приведение в юникод """
+
+    return unicode(val1) == unicode(val2)
