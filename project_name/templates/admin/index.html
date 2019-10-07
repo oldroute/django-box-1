@@ -69,7 +69,7 @@
 {% if app_list or sidebar_models %}
 
     <div class="module" id="recent-actions-module">
-        <div class="sidebar__caption">Последние действия</div>
+        <div class="sidebar__caption">Последние действия на сайте</div>
         {% load log %}
         {% get_admin_log 10 as admin_log %}
         {% if not admin_log %}

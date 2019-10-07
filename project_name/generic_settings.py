@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # ~========== ADMIN REORDER ===========~
 INSTALLED_APPS += ['admin_reorder', ]
-MIDDLEWARE += ['admin_reorder.middleware.ModelAdminReorder' ]
+MIDDLEWARE += ['{{ project_name }}.middleware.CustomModelAdminReorder']
 ADMIN_REORDER = (
     {
         'app': 'pages', 'label': u'Контент сайта',
