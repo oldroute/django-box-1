@@ -163,6 +163,7 @@ NEWS_ADMIN_EXTRA_CSS = {'all': ['css/admin/common.css']}
 # ~========== DJANGO PAGES CMS ===========~
 INSTALLED_APPS += ['pages', '{{ project_name }}.custom_pages']
 PAGE_DEFAULT_TEMPLATE = 'pages/default.html'
+PAGE_USE_STRICT_URL = True
 PAGE_HIDE_ROOT_SLUG = True
 PAGE_USE_LANGUAGE_PREFIX = False
 PAGE_LANGUAGES = (('ru', 'Russian'),)
