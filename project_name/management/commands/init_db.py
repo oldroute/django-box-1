@@ -36,8 +36,8 @@ class Command(BaseCommand):
             sys.stdout.write(self.style.WARNING("           ALREADY EXIST\n"))
 
     def _create_superuser(self):
-        username = password = '1'
-        email = '1@m.ru'
+        username = password = 'admin'
+        email = 'admin@mail.ru'
         sys.stdout.write("\rCreating superuser...")
 
         try:
@@ -151,19 +151,6 @@ class Command(BaseCommand):
 
             sys.stdout.write(self.style.SUCCESS("    OK\n"))
 
-        # Social menu
-        sys.stdout.write("\rCreating social_menu...")
-        try:
-            social_menu = Menu.objects.get(name='social_menu')
-            sys.stdout.write(self.style.WARNING("    ALREADY EXIST\n"))
-        except:
-            with transaction.atomic():
-                social_menu = Menu.objects.create(name='social_menu')
-                _ = MenuItem.objects.create(menu=social_menu, parent=social_menu.root_item, caption=u'vkontakte', url='/')
-                _ = MenuItem.objects.create(menu=social_menu, parent=social_menu.root_item, caption=u'facebook', url='/')
-                _ = MenuItem.objects.create(menu=social_menu, parent=social_menu.root_item, caption=u'twitter', url='/')
-                _ = MenuItem.objects.create(menu=social_menu, parent=social_menu.root_item, caption=u'youtube', url='/')
-            sys.stdout.write(self.style.SUCCESS("    OK\n"))
 
     def _create_pages(self):
         # Guideline page

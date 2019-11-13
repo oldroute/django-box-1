@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.redirects',
     'import_redirects',
     'mptt',
-    'treemenus',
     'dj_pagination',
     '{{ project_name }}',
     '{{ project_name }}.service',
@@ -228,6 +227,13 @@ FEEDBACK_FORMS_NAMES = {
 # ~======== CHUNKS =================~
 INSTALLED_APPS += ['chunks']
 TEMPLATES[0]['OPTIONS']['context_processors'] += ['chunks.context_processors.chunks_processor']
+
+# ~======== TREEMENUS ==============~
+INSTALLED_APPS += ['treemenus']
+TREEMENUS_NAMES = {
+    'header_menu':  u'Меню в шапке сайта',
+    'footer_menu':  u'Меню в подвале сайта',
+}
 
 # ~======== CATALOG ================~
 
