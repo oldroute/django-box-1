@@ -15,7 +15,7 @@ django-modeladmin-reorder==0.3.1
 
 git+git://github.com/oldroute/django-catalog-tree@1.11
 git+git://github.com/oldroute/django-treemenus@1.11
-git+git://github.com/oldroute/django-simple-feedback.git@antispam-1.11
+git+git://github.com/oldroute/django-simple-feedback.git@1.11
 git+git://github.com/oldroute/django-tinymce-attachment@1.11
 git+git://github.com/oldroute/django-nocaptcha-recaptcha.git
 git+git://github.com/oldroute/django-chunks.git@1.11
