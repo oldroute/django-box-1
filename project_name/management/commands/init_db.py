@@ -162,7 +162,7 @@ class Command(BaseCommand):
             default_page = Page.objects.create(
                 template='pages/default.html',
                 status=Page.PUBLISHED,
-                author=UserModel.objects.get(username='1', email='1@m.ru')
+                author=UserModel.objects.get(username='admin')
             )
             Content.objects.create(
                 page=default_page, language=settings.LANGUAGE_CODE,
