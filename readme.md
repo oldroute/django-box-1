@@ -6,6 +6,19 @@
  - PostgreSQL >= 9
  - Node.js >= 10.10
 
+##### Packages
+* [Catalog](https://github.com/oldroute/django-catalog-tree)
+* [Menu](https://github.com/oldroute/django-treemenus)
+* [Import-redirects](https://github.com/oldroute/django-import-redirects)
+* [Seo](https://github.com/oldroute/django-seo)
+* [News](https://github.com/oldroute/django-easy-news)
+* [Chunks](https://github.com/oldroute/django-chunks)
+* [Attachments](https://github.com/oldroute/django-tinymce-attachment)
+* [Feedback](https://github.com/oldroute/django-simple-feedback)
+* [Google ReCaptcha v2](https://github.com/oldroute/django-nocaptcha-recaptcha)
+* [CMS](https://github.com/oldroute/django-page-cms)
+* [Filebrowser](https://github.com/oldroute/django-filebrowser-no-grappelli)
+
 ##### Installation
 Create bash file "new_project.sh" in your projects directory with following content:
 ``` sh
