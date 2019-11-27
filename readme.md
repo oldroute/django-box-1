@@ -22,7 +22,8 @@ python init_settings.py
 rm init_settings.py
 rm readme.md
 python manage.py migrate
-python manage.py init_db
+python manage.py loaddata $project_name/fixtures/db.json
+python manage.py init_catalog
 npm i
 git init
 git remote add origin gitolite3@git.redsolution.ru:sites/$project_name
